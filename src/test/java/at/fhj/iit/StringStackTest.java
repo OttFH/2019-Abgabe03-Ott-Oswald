@@ -103,4 +103,13 @@ public class StringStackTest
 
         stack.pop();
     }
+
+    /**
+     * tests stack created by a negetaive capacity value. Should give back Exception.
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void negativeStackCapacity() throws Exception
+    {
+        StringStack newStack = new StringStack(-1);
+    }
 }
