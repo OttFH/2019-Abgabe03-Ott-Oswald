@@ -84,4 +84,20 @@ public class StringStackTest
         stack.push("Nine");
         stack.push("Ten");
     }
+
+    @Test(expected = IllegalStateException.class)
+    public void testPopToMuch() throws Exception
+    {
+        stack.push("Eleven");
+        stack.push("Twelve");
+        stack.push("Thirteen");
+
+        Assert.assertEquals("Thirteen",stack.pop());
+        Assert.assertEquals("Twelve",stack.pop());
+        Assert.assertEquals("Eleven",stack.pop());
+
+        Assert.assertTrue(stack.isEmpty());
+
+        stack.pop();
+    }
 }
