@@ -6,12 +6,12 @@ import org.junit.Test;
 
 public class StringStackTest
 {
-    public Stack s;
+    public Stack stack;
     
     @Before
     public void setup() throws Exception
     {
-        s = new StringStack(5); // keep size of 5 !!
+        stack = new StringStack(5); // keep size of 5 !!
     }
     
     /**
@@ -23,7 +23,7 @@ public class StringStackTest
     @Test
     public void testIsEmpty() throws Exception
     {
-        Assert.assertTrue(s.isEmpty());
+        Assert.assertTrue(stack.isEmpty());
     }
     
     /**
@@ -35,6 +35,8 @@ public class StringStackTest
     @Test
     public void testIsNotEmpty() throws Exception
     {
+        stack.push("");
+        Assert.assertFalse(stack.isEmpty());
     }
 
     /**
