@@ -85,8 +85,11 @@ public class StringStackTest
         stack.push("Ten");
     }
 
+    /**
+     * tests the pop function. pops more than actual items. Should give back Exception.
+     */
     @Test(expected = IllegalStateException.class)
-    public void testPopToMuch() throws Exception
+    public void testPopTooMuch() throws Exception
     {
         stack.push("Eleven");
         stack.push("Twelve");
