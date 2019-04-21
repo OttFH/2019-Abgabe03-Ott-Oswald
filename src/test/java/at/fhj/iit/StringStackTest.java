@@ -70,5 +70,18 @@ public class StringStackTest
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
-    
+
+    /**
+     * tests the size of stack. Pushing more than the actual size. Should give back Exception.
+     */
+    @Test(expected = IllegalStateException.class)
+    public void testPushTooMuch() throws Exception
+    {
+        stack.push("Five");
+        stack.push("Six");
+        stack.push("Seven");
+        stack.push("Eight");
+        stack.push("Nine");
+        stack.push("Ten");
+    }
 }
